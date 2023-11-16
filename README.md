@@ -60,7 +60,7 @@ Run steps:
 docker build -t trainer:flash -f Dockerfile.train_flash .
 
 # run
-docker run -it -p 127.0.0.1:8111:80 --name trainer_flash trainer:flash /bin/bash
+docker run --gpus "device=3" -it -p 127.0.0.1:8111:80 --name trainer_flash trainer:flash /bin/bash
 
 # Docker run.
 # if CMD failed
